@@ -37,4 +37,4 @@ class Plataforma:
         print("Mar")
 
     def enviar_ataques():
-
+        pass
