@@ -33,8 +33,8 @@ class Plataforma:
         self.barcos=[]
 
     def mostrar_mar():
-        for false in mar:
-        print("Mar")
+        mar = [["mar" for _ in fila] for fila in mar]
+        print(mar)
 
     def enviar_ataques():
         pass
