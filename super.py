@@ -1,6 +1,10 @@
-class Persona:
-    def __init__(self, name, age):
+class LivingBeing:
+    def __init__(self, name):
         self.name = name
+
+class Persona(LivingBeing):
+    def __init__(self, name, age):
+        super().__init__(name)
         self.age = age
 
     def greet(self):
@@ -11,9 +15,9 @@ class Student(Persona):
         super().__init__(name, age)
         self.student_id = student_id
 
-    def greet(self):
+    def introduce(self):
         super().greet()
-        print(f"Hello! My student ID is {self.student_id}.")
+        print(f"Hello! I'm {self.name}, {self.age} years old, and my student ID is {self.student_id}.")
 
 student = Student("Ana", 29, "S123")
 student.greet()
